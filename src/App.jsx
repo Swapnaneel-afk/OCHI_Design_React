@@ -7,11 +7,15 @@ import Eyes from "./components/Eyes";
 import Featured from "./components/Featured";
 import Cards from "./components/Cards";
 import Footer from "./components/Footer";
+import { AnimatePresence } from "framer-motion";
 
 import LocomotiveScroll from "locomotive-scroll";
+import { useLocation } from "react-router-dom";
 
 function App() {
+  const location = useLocation();
   const locomotiveScroll = new LocomotiveScroll();
+
   return (
     <div className="w-full min-h-screen text-white bg-zinc-900 ">
       <Navbar />
